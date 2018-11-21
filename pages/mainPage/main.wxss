@@ -9,3 +9,35 @@
   height: 375rpx;
   width: 100%;
 }
+
+.main-search-bar {
+  display: flex;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 15rpx;
+  justify-content: center;
+}
+
+.main-input {
+  display: inline-flex;
+  width: 550rpx;
+  height: 60rpx;
+  background-color: #BEBEBE;
+  line-height: 60rpx;
+  justify-content: center;
+  text-align: center;
+  border: 10rpx;
+  padding: 0 10px;
+  font-size: 33rpx;
+  color: #02DF82;
+}
+
+.search-icon {
+  display: inline-flex;
+  height: 60rpx;
+  width: 100rpx;
+  line-height: 60rpx;
+  font-size: 60rpx;
+  margin-left: 20rpx;
+}
+

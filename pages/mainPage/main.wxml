@@ -7,4 +7,8 @@
       </swiper-item>
     </block>
   </swiper>
+  <view class='main-search-bar'>
+    <input placeholder='请输入搜索关键词' value='{{searchKey}}' class='main-input' placeholder-class='placeholder-class'/>
+    <icon class='iconfont icon-sousuo1 search-icon'/>
+  </view>
 </view>

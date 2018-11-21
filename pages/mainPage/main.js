@@ -7,7 +7,8 @@ Page({
     swipeImageUrl: [   "http://pic.58pic.com/58pic/14/03/02/58V58PICTFk_1024.jpg",
       "http://tp.yiaedu.com/showimg.php?url=http://uploads.xuexila.com/allimg/1703/867-1F330164643.jpg",
       "http://www.17qq.com/img_qqtouxiang/76490995.jpeg"
-    ]
+    ],
+    searchKey: ''
   },
 
   /**
