@@ -1,1 +1,11 @@
+.main-swiper {
+  display: flex;
+  height: 375rpx !important;
+  width: 100%;
+}
 
+.main-swiper-image {
+  display: flex;
+  height: 375rpx;
+  width: 100%;
+}
