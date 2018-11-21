@@ -1,0 +1,3 @@
+<view class='container-owner'>
+  <navigation selected="1" class="container-navigate"></navigation>
+</view>

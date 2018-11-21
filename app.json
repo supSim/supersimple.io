@@ -1,7 +1,19 @@
 {
   "pages":[
+    "pages/mainPage/main",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/shoppingCart/shoppingCart",
+    "pages/pointMall/pointMall",
+    "pages/placeOrder/placeOrder",
+    "pages/personalInfo/personalInfo",
+    "pages/personal/personal",
+    "pages/orderDetail/orderDetail",
+    "pages/order/order",
+    "pages/goodsDetail/goodsDetail",
+    "pages/coupon/coupon",
+    "pages/checkList/checkList",
+    "pages/category/category"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,73 @@
+@import '../../asset/icon/stylesheet.wxss';
+.navigate-bar {
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  justify-content: center;
+  position: relative;
+  border-top: 1rpx solid #e0e0e0;
+}
+
+.navigate-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 150rpx;
+  justify-content: center;
+  font-size: 30rpx;
+}
+
+.navigate-icon-style-1{
+  display: flex;
+  height: 60rpx;
+  width: 150rpx;
+  font-size: 50rpx !important;
+  justify-content: center;
+}
+
+.navigate-text-style{
+  display: flex;
+  height: 40rpx;
+  width: 150rpx;
+  line-height: 40rpx;
+  justify-content: center;
+}
+
+.navigate-shopping-cart{
+  display: flex;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background-color: #FF359A;
+  position: absolute;
+  left: 315rpx;
+  top: -50rpx;
+  justify-content: center;
+}
+
+.navigate-icon-style-2{
+  display: flex;
+  font-size: 90rpx;
+  line-height: 120rpx;
+  vertical-align: middle;
+  color: white;
+}
+
+.navigate-shopping-cart-num {
+  position: absolute;
+  width: 20rpx;
+  height: 100rpx;
+  line-height: 105rpx;
+  vertical-align: middle;
+  font-size: 29rpx;
+  color: white;
+  left: 50rpx;
+}
+
+.margin-left-150{
+  margin-left: 150rpx;
+}
+
+.color-red {
+  color: #FF359A !important;
+}

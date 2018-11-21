@@ -1,0 +1,22 @@
+<view class='navigate-bar'>
+  <view class="navigate-item {{selected == 0 ? 'color-red': ''}}"  catchtap='switchPage' data-witch="0">
+    <icon class="iconfont icon-shouye navigate-icon-style-1"></icon>
+    <text class='navigate-text-style'>首页</text>
+  </view>
+  <view class="navigate-item {{selected == 1 ? 'color-red': ''}}" catchtap='switchPage' data-witch="1">
+    <icon class="iconfont icon-fenlei navigate-icon-style-1"></icon>
+    <text class='navigate-text-style'>分类</text>
+  </view>
+  <view class='navigate-shopping-cart' catchtap='switchPage' data-witch="2">
+    <icon class="iconfont icon-gouwuche navigate-icon-style-2" ></icon>
+    <text class='navigate-shopping-cart-num'>{{shoppingCartNum}}</text>
+  </view>
+  <view class="navigate-item {{selected == 3 ? 'color-red': ''}} margin-left-150" catchtap='switchPage' data-witch="3">
+    <icon class="iconfont icon-danju navigate-icon-style-1"></icon>
+    <text class='navigate-text-style'>订单</text>
+  </view>
+  <view class="navigate-item {{selected == 4 ? 'color-red': ''}}" catchtap='switchPage' data-witch="4">
+    <icon class="iconfont icon-wodemw navigate-icon-style-1"></icon>
+    <text class='navigate-text-style'>我的</text>
+  </view>
+</view>

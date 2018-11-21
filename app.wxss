@@ -7,4 +7,17 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.container-navigate{
+  position: absolute;
+  bottom: 0;
+}
+
+.container-owner {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
