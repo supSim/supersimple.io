@@ -1,4 +1,5 @@
 @import '../../asset/icon/stylesheet.wxss';
+@import '../../asset/color/color.wxss';
 .navigate-bar {
   display: flex;
   flex-direction: row;
@@ -6,6 +7,7 @@
   justify-content: center;
   position: relative;
   border-top: 1rpx solid #e0e0e0;
+  z-index: 999;
 }
 
 .navigate-item {

@@ -1,3 +1,5 @@
+@import '../../asset/color/color.wxss';
+
 .main-swiper {
   display: flex;
   height: 375rpx !important;
@@ -13,7 +15,7 @@
 .main-search-bar {
   display: flex;
   width: 100%;
-  height: 60rpx;
+  height: 90rpx;
   margin-top: 15rpx;
   justify-content: center;
 }
@@ -30,6 +32,7 @@
   padding: 0 10px;
   font-size: 33rpx;
   color: #02DF82;
+  margin: auto 0;
 }
 
 .search-icon {
@@ -38,6 +41,201 @@
   width: 100rpx;
   line-height: 60rpx;
   font-size: 60rpx;
-  margin-left: 20rpx;
+  margin: auto 20rpx;
 }
 
+.main-shop-desc{
+  display: flex;
+  height: 140rpx;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+
+.main-shop-desc-left{
+  display: inline-flex;
+  height: 120rpx;
+  width: 499rpx;
+  border-right: 1px solid;
+  border-color: #E0E0E0;
+  margin: auto 0;
+  margin-left: 10rpx;
+}
+
+.shop-image {
+  display: inline-block;
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 60rpx;
+  background-color: red;
+}
+
+.shop-text-desc {
+  display: inline-flex;
+  width: 350rpx;
+  height: 120rpx;
+  margin-left: 10rpx;
+  flex-direction: column;
+}
+
+.text-desc-style {
+  display: block;
+  height: 40rpx;
+  width: 350rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+
+.main-shop-desc-right {
+  display: inline-flex;
+  flex-direction: column;
+  width: 150rpx;
+  height: 120rpx;
+  margin: 10rpx;
+}
+
+.desc-right-style-1 {
+  display: flex;
+  height: 25rpx;
+  justify-content: flex-end;
+  font-size: 24rpx;
+}
+
+.desc-right-style-2 {
+  display: flex;
+  height: 35rpx;
+  justify-content: flex-end;
+  font-size: 30rpx;
+  color: red;
+}
+
+.main-goods-list {
+  display: flex;
+  width: 710rpx;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  flex-direction: column;
+}
+
+.main-goods-container {
+  display: flex;
+  flex-direction: column;
+  height: 780rpx;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.main-goods-image {
+  display: flex;
+  width: 710rpx;
+  height: 450rpx;
+  position: relative;
+}
+
+.goods-focus-num {
+  position: absolute;
+  height: 40rpx;
+  padding: 5rpx;
+  left: 0;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}
+
+.main-goods-desc {
+  display: flex;
+  flex-direction: column;
+  height: 250rpx;
+}
+
+.main-goods-desc-first {
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.main-lable-list {
+  display: flex;
+  height: 50rpx;
+  font-size: 25rpx;
+  color: white;
+}
+
+.main-lable-item {
+  margin: auto 10rpx;
+  padding: 0 10rpx;
+  height: 40rpx;
+  border-radius: 5rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+.main-goods-num {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  vertical-align: bottom;
+  font-size: 28rpx;
+}
+
+.focus-number {
+  font-size: 32rpx !important;
+  color: red;
+}
+
+.main-goods-presale {
+  display: flex;
+  height: 35rpx;
+  font-size: 28rpx;
+  line-height: 35rpx;
+}
+
+.goods-num-desc {
+  display: flex;
+  height: 150rpx;
+  justify-content: space-between;
+}
+
+.goods-number-desc-right {
+  display: flex;
+  flex-direction: column;
+  height: 150rpx;
+  margin-right: 20rpx;
+  justify-content: flex-end
+}
+
+.goods-add-shop-cart {
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  justify-content: center;
+  border: 1rpx solid;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+  width: 170rpx;
+}
+
+.goods-pick-time {
+  display: flex;
+  font-size: 26rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.flex-end {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.join-us-image {
+  display: block;
+  height: 175rpx;
+  width: 100%;
+  margin: 5rpx 0 175rpx 0;
+  background: white;
+}

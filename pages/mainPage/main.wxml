@@ -1,4 +1,5 @@
-<view class='container-owner'>
+<view class='container-owner background-color-grey'>
+  <view class='scroll-container'>
   <navigation class='container-navigate' select="0"></navigation>
   <swiper indicator-dots='true' indicator-color='#f0f0f0' indicator-active-color='#28ff28' autoplay='true' class='main-swiper'>
     <block wx:for="{{swipeImageUrl}}">
@@ -7,8 +8,52 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class='main-search-bar'>
+  <view class='main-search-bar background-color-white'>
     <input placeholder='请输入搜索关键词' value='{{searchKey}}' class='main-input' placeholder-class='placeholder-class'/>
     <icon class='iconfont icon-sousuo1 search-icon'/>
+  </view>
+  <view class='main-shop-desc background-color-white'>
+    <view class='main-shop-desc-left'>
+      <image class='shop-image'>
+      </image>
+      <view class='shop-text-desc'>
+        <view class='text-desc-style'>{{shopDesc.shopLoc}}</view>
+        <view class='text-desc-style'>{{shopDesc.shopName}}</view>
+        <view class='text-desc-style'>{{shopDesc.shopDesc}}</view>
+      </view>
+    </view>
+    <view class='main-shop-desc-right'>
+      <view class='desc-right-style-1'>粉丝数</view>
+      <view class='desc-right-style-2'>{{shopDesc.fans}}</view>
+      <view class='desc-right-style-1'>购买指数</view>
+      <view class='desc-right-style-2'>{{shopDesc.buyPoint}}</view>
+    </view>
+  </view>
+  <view class='main-goods-list background-color-white'>
+    <view wx:for="{{goodsList}}" class='main-goods-container'>
+      <image src='{{item.goodsImage}}' class='main-goods-image'>
+        <text class='goods-focus-num background-color-green'>关注： 88</text>
+      </image>
+      <view class='main-goods-desc'>
+        <text class='main-goods-desc-first'>{{item.goodsDesc+item.goodsName+item.goodsWeight}}</text>
+        <view class='main-lable-list'>
+          <view wx:for="{{item.goodsLable}}" wx:for-item="lableName"    class='main-lable-item background-color-green'>
+          {{lableName}}</view>
+        </view>
+        <view class='goods-num-desc'>
+          <view>
+            <text class='main-goods-num focus-number'>￥{{item.goodsPrice}}</text>
+            <text class='main-goods-num'>已售<text class='focus-number'>{{item.goodsSaleNum}}</text>个/还剩<text class='focus-number'>{{item.goodsRemain}}</text>个</text>
+            <text class='main-goods-presale'>预售：{{item.preSaleTime}}</text>
+          </view>
+          <view class='goods-number-desc-right'>
+            <view class='flex-end'><view class='goods-add-shop-cart color-green'>加入购物车</view></view>
+            <view class='goods-pick-time'>提货：{{item.goodsPickTime}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image class='join-us-image'></image>
   </view>
 </view>
