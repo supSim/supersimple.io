@@ -1,0 +1,53 @@
+.detail-goods-image {
+  display: block;
+  height: 375rpx;
+  width: 750rpx;
+  background-color: red;
+  margin-top: 110rpx;
+}
+
+.detail-price-info {
+  display: flex;
+  height: 100rpx;
+  width: 750rpx;
+}
+
+.price-info-left {
+  display: flex;
+  padding: 0 20rpx;
+  width: 400rpx;
+  background: red;
+  justify-content: space-between;
+}
+
+.detail-price-common-style {
+  display: inline-flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: white;
+}
+
+.border-block {
+  border-top: 50rpx solid red;
+  border-left: 50rpx solid red;
+  border-bottom: 50rpx solid red;
+  border-right: 50rpx solid #FFC125;
+}
+
+.price-info-right {
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+  width: 250rpx;
+  background-color: #FFC125;
+}
+
+.price-right-style {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: grey;
+}

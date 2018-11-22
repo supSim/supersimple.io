@@ -4,7 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    currentPage: 1,
+    goods: {
+      goodsId: '123456',
+      goodsName: '哈密瓜',
+      goodsImage: 'http://pic.58pic.com/58pic/14/03/02/58V58PICTFk_1024.jpg',
+      goodsRealPrice: '9.88',
+      goodsOriginPrice: '15.22'
+    }
   },
 
   /**

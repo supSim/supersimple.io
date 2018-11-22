@@ -1,0 +1,15 @@
+<view>
+    <TabBar selected="{{currentPage}}"></TabBar>
+    <image src='{{goods.goodsImage}}' class='detail-goods-image'></image>
+    <view class='detail-price-info'>
+      <view class='price-info-left'>
+        <text class='detail-price-common-style'>￥{{goods.goodsRealPrice}}</text>
+        <text class='detail-price-common-style'>￥{{goods.goodsOriginPrice}}</text>
+      </view>
+      <view class='border-block'></view>
+      <view class='price-info-right'>
+        <text class='price-right-style'>即将结束</text>  
+        <text class='price-right-style'>11-22 19:00</text>  
+      </view>
+    </view>
+</view>

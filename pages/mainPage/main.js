@@ -101,5 +101,9 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  toGoodsDetail (event) {
+    console.log(event.currentTarget.dataset.goodsId);
   }
 })

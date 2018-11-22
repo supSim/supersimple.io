@@ -30,7 +30,7 @@
     </view>
   </view>
   <view class='main-goods-list background-color-white'>
-    <view wx:for="{{goodsList}}" class='main-goods-container'>
+    <view wx:for="{{goodsList}}" class='main-goods-container' bindtap='toGoodsDetail' data-goodsId='{{item.goodsId}}'>
       <image src='{{item.goodsImage}}' class='main-goods-image'>
         <text class='goods-focus-num background-color-green'>关注： 88</text>
       </image>
