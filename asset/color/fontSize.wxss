@@ -1,0 +1,15 @@
+.font-size-large {
+  font-size: 35rpx !important;
+}
+.font-size-middle {
+  font-size: 32rpx !important;
+}
+.font-size-small {
+  font-size: 28rpx !important;
+}
+.font-size-super {
+  font-size: 65rpx !important;
+}
+.font-size-smaller {
+  font-size: 25rpx !important;
+}

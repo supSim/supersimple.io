@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentPage: 1,
+    currentPage: 0,
     goods: {
       goodsId: '123456',
       goodsName: '哈密瓜',
@@ -78,9 +78,10 @@ Page({
 
   changeTab: function (event) {
     let whichPage = event.detail;
-    if (this.currentPage == whichPage) return;
+    if (this.data.currentPage == whichPage) return;
     this.setData({
       'currentPage': whichPage
     });
+    console.log(typeof this.data.currentPage);
   }
 })

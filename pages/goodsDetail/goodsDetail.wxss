@@ -1,4 +1,5 @@
 @import '../../asset/color/color.wxss';
+@import '../../asset/color/fontSize.wxss';
 .detail-goods-image {
   display: block;
   height: 375rpx;
@@ -48,7 +49,6 @@
   height: 50rpx;
   line-height: 50rpx;
   vertical-align: middle;
-  font-size: 28rpx;
   color: grey;
 }
 
@@ -67,7 +67,6 @@
   height: 50rpx;
   line-height: 50rpx;
   vertical-align: center;
-  font-size: 35rpx;
   font-weight: bold;
 }
 
@@ -78,7 +77,6 @@
   padding: 0 10rpx;
   border-radius: 8rpx;
   float: right;
-  font-size: 28rpx;
   color: white;
   margin-right: 20rpx;
 }
@@ -87,7 +85,6 @@
   display: inline-flex;
   flex-direction: column;
   width: 490rpx;
-  font-size: 25rpx;
   padding-left: 10rpx;
 }
 
@@ -107,11 +104,68 @@
 .detail-sale-num {
   margin-top: 50rpx;
   display: inline-block;
-  font-size: 25rpx;
   padding-right: 10rpx;
   vertical-align: bottom;
 }
 
 .detail-text {
   display: inline-block;
+}
+
+.detail-share-info {
+  display: flex;
+  height: 170rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.share-info-style{
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+
+.share-info-image {
+  display: flex;
+  height: 90rpx;
+  width: 90rpx;
+  line-height: 90rpx;
+  justify-content: center;
+  border-radius: 45rpx;
+  margin-bottom: 10rpx;
+  margin: auto;
+}
+
+.share-info-text {
+  display: flex;
+  height: 50rpx;
+  margin: 0 auto 0rpx auto;
+}
+
+.goods-detail-bottom {
+  display: flex;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.detail-bottom-style  {
+  display: inline-flex;
+  width: 150rpx;
+  line-height: 100rpx;
+  justify-content: center;
+}
+
+.detail-gouwuche-num {
+  position: absolute;
+  left: 70rpx;
+}
+
+.width-150 {
+  width: 150rpx;
+}
+
+.width-300 {
+  width: 300rpx;
 }
