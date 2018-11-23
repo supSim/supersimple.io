@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例 肖杨
+//测试提交
 const app = getApp()
 
 Page({
