@@ -1,5 +1,9 @@
 <view class='goods-detail-tab'>
-  <icon class='iconfont icon-shouye detail-icon-home border-right border-color-grey'></icon>
-  <view wx:for="{{tabBarList}}"><view class="detail-icon-home width-200  border-right-color-grey {{index === 2 ? '': 'border-right'}} {{item.id == selected?'border-bottom-green': ''}}" bindtap='changeTab' data-id="{{item.id}}">{{item.name}}</view>
+  <icon class='iconfont icon-shouye detail-icon-home'></icon>
+   <view class='divider-line background-color-grey'></view>
+  <view wx:for="{{tabBarList}}"><view class="detail-icon-home width-200  {{item.id == selected?'border-bottom-green color-green': ''}}" bindtap='changeTab' data-id="{{item.id}}">
+  <text class='detail-icon-home width-200'>{{item.name}}</text>
+  <view class='divider-line background-color-grey' wx:if="{{index !== 2}}"></view>
+  </view>
   </view>
 </view>

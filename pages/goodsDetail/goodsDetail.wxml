@@ -1,5 +1,5 @@
 <view>
-    <TabBar selected="{{currentPage}}"></TabBar>
+    <TabBar selected="{{currentPage}}" bind:changeTab="changeTab"></TabBar>
     <image src='{{goods.goodsImage}}' class='detail-goods-image'></image>
     <view class='detail-price-info'>
       <view class='price-info-left'>
@@ -7,9 +7,24 @@
         <text class='detail-price-common-style'>￥{{goods.goodsOriginPrice}}</text>
       </view>
       <view class='border-block'></view>
-      <view class='price-info-right'>
+      <view class='price-info-right background-color-yellow'>
         <text class='price-right-style'>即将结束</text>  
         <text class='price-right-style'>11-22 19:00</text>  
       </view>
     </view>
+    <view class='detail-goods-desc border-bottom-color-grey border-bottom'>
+      <view class='detail-goods-name'>{{goods.goodsDesc + goods.goodsName}}</view>
+      <view style='width: 100%'>
+        <view class='detail-focus-num background-color-yellow'>关注人数： {{goods.focusNum}}</view>
+      </view>
+    </view>
+    <view class='detail-sale-info'>
+        <view class='sale-time-info color-red'>
+          <view class='sale-time-style'>预售时间：{{goods.preSaleTime}}</view>
+          <view class='sale-time-style'>提货时间：{{goods.goodsPickTime}}</view>
+        </view>
+        <view class='detail-sale-num'>
+          已售<view class='detail-text color-red'>{{goods.goodsSaleNum}}</view>份/还剩<view class='detail-text color-red'>{{goods.goodsRemain}}</view>份
+        </view>
+      </view>
 </view>

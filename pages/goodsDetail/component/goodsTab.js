@@ -11,5 +11,11 @@ Component({
       type: Number,
       default: 0
     }
+  },
+  methods: {
+    changeTab: function( event ) {
+      console.log(event.currentTarget.dataset.id);
+      this.triggerEvent('changeTab', event.currentTarget.dataset.id);
+    }
   }
 });
