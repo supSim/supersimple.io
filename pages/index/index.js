@@ -1,5 +1,5 @@
-//index.js
-//获取应用实例 肖杨
+﻿//index.js
+//获取应用实例 肖杨 raa
 //测试提交 123
 const app = getApp()
 
