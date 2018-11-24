@@ -13,6 +13,9 @@
 .color-grey {
   color: #E0E0E0;
 }
+.color-black {
+  color: #000000;
+}
 .border-right-color-grey {
   border-right-color: #E0E0E0;
 }

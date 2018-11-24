@@ -169,3 +169,122 @@
 .width-300 {
   width: 300rpx;
 }
+
+.buy-record-container {
+  display: flex;
+  flex-direction: column;
+  height: 300rpx;
+  margin-top: 123rpx;
+  width: 100%;
+  padding: 10rpx;
+}
+
+.buy-record-top-sector {
+  display: flex;
+  height: 229rpx;
+  width: 100%;
+  padding: 10rpx 0;
+  border-bottom: 1px dashed;
+}
+
+.buy-record-image {
+  display: inline-block;
+  height: 229rpx;
+  width: 229rpx;
+  position: relative;
+}
+
+.focus-num {
+  display: block;
+  position: absolute;
+  height: 40rpx;
+  padding: 0 10rpx;
+  line-break: 40rpx;
+  vertical-align: middle;
+  left: 0;
+  top: 0;
+  border-radius: 0 20rpx 20rpx 0;
+}
+
+.buy-record-text-desc {
+  display: flex;
+  height: 200rpx;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+
+.record-text-style {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  vertical-align: middle;
+}
+
+.record-text-style2 {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 200rpx;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+.buy-record-time {
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  width: 730rpx;
+}
+
+.record-time-style {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  vertical-align: middle;
+}
+
+.buy-record-num {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+}
+
+.record-buy-people {
+  display: flex;
+  height: 120rpx;
+  justify-content: space-between;
+  width: 730rpx;
+  padding:  0 10rpx;
+  margin-top: 5rpx;
+}
+
+.record-people-head-image {
+  display: inline-flex;
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 45rpx;
+  margin-top: 15rpx;
+}
+
+.record-people-name {
+  display: inline-block;
+  line-height: 120rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.horizontal-center {
+  display: flex;
+  width: 746rpx;
+  justify-content: center;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 10rpx;
+}
+
+.live-border {
+  border: 1px dashed #000;
+}

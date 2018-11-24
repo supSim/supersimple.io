@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentPage: 0,
+    currentPage: 1,
     goods: {
       goodsId: '123456',
       goodsName: '哈密瓜',
@@ -16,7 +16,16 @@ Page({
       preSaleTime: '11-21 20:00 - 11-22 19:00',
       goodsPickTime: '11-23 12:05',
       goodsSaleNum: 199,
-      goodsRemain: 1
+      goodsRemain: 1,
+      goodsWeight: '2斤土0.05/份',
+      buyGoodsPeople: 155,
+      buyPeoples: [
+        {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1},
+        {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1},
+        { openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 },
+        { openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 },
+        { openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 }
+      ]
     }
   },
 

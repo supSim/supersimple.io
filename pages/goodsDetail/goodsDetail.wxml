@@ -1,11 +1,12 @@
 <view class='container-owner background-color-grey'>
    <TabBar selected="{{currentPage}}" bind:changeTab="changeTab"></TabBar>
-   <view wx:if ="{{currentPage == 0}}">
+   <view class='scroll-container'>
+  <view wx:if ="{{currentPage == 0}}">
     <image src='{{goods.goodsImage}}' class='detail-goods-image'></image>
     <view class='detail-price-info'>
       <view class='price-info-left'>
         <text class='detail-price-common-style'>￥{{goods.goodsRealPrice}}</text>
-        <text class='detail-price-common-style'>￥{{goods.goodsOriginPrice}}</text>
+        <text class='detail-price-common-style' style="TEXT-DECORATION: line-through">￥{{goods.goodsOriginPrice}}</text>
       </view>
       <view class='border-block'></view>
       <view class='price-info-right background-color-yellow font-size-small'>
@@ -45,5 +46,41 @@
       </text>
       <text class='detail-bottom-style width-300 background-color-yellow color-white font-size-large'>加入购物车</text>
       <text class='detail-bottom-style width-300 background-color-red color-white font-size-large'>单件购买</text>
+  </view>
+    <view wx:if="{{currentPage == 2 || currentPage == 1}}" style='margin-bottom: 120rpx;'>
+      <view class='buy-record-container background-color-white'>
+        <view class='buy-record-top-sector border-bottom-color-grey'>
+          <image src='{{goods.goodsImage}}' class='buy-record-image'>
+            <text class='focus-num color-white background-color-red font-size-small'>关注:{{goods.focusNum}}</text>
+          </image>
+          <view class='buy-record-text-desc font-size-small'>
+            <text class='record-text-style'>{{goods.goodsDesc + goods.goodsName + (goods.goodsWeight)}}</text>
+            <text class='record-text-style2 background-color-blue color-white'>关注：{{goods.focusNum}}</text>
+            <text class='record-text-style color-red'>￥{{goods.goodsRealPrice}}  <text class='color-black font-size-smaller' style="TEXT-DECORATION: line-through">￥{{goods.goodsOriginPrice}}</text></text>
+            <text class='record-text-style'>还剩<text class='color-red'>{{goods.goodsRemain}}</text>份</text>
+          </view>
+        </view>
+        <view class='buy-record-time font-size-smaller'>
+          <text class='record-time-style'>销售：{{goods.preSaleTime}}</text>
+          <text class='record-time-style'>提货：{{goods.goodsPickTime}}</text>
+        </view>
+      </view>
+      <view wx:if="{{currentPage == 1}}">
+        <view class='buy-record-num background-color-blue color-white font-size-middle'>
+          共有{{goods.buyGoodsPeople}}人购买,累计销售{{goods.goodsSaleNum}}份
+        </view>
+        <view wx:for="{{goods.buyPeoples}}" wx:for-item="people" class='record-buy-people background-color-white'>
+          <view style='display: flex;'>
+            <image class='record-people-head-image background-color-red'></image>
+            <text class='record-people-name font-size-middle'>{{people.customerName}}</text>
+          </view>
+          <text class='record-people-name font-size-middle'>{{people.buyNum}}</text>
+          <text class='record-people-name font-size-middle'>{{people.buyTime}}</text>
+        </view>
+      </view>
+      <text class='font-size-middle horizontal-center background-color-white' wx:if="{{goods.buyPeoples.length > 9 && currentPage == 1}}">还有很多呢，就显示这么多吧~</text>
+      <text class='font-size-middle horizontal-center background-color-white live-border'
+      wx:if="{{currentPage == 2}}">暂时不支持直播功能，去其他位置看看吧~</text>
     </view>
+  </view>
 </view>
