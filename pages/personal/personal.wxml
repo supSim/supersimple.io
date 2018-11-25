@@ -1,4 +1,4 @@
-<view class="container"> 
+<view class="container-owner"> 
   <navigation class='container-navigate' selected="4"></navigation>
   <view class="userinfo">
     <image class="userinfo-avatar" src="http://pic.58pic.com/58pic/14/03/02/58V58PICTFk_1024.jpg" background-size="account-bg"></image>
