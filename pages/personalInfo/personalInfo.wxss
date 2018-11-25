@@ -1,0 +1,53 @@
+input.phinput{
+  display: inline-flex;
+  margin-left: 5px;
+  line-height: 17px;
+  height: 17px;
+  min-height: none;
+  margin: 2px 0 2px 5px;
+  font-size: 16px;
+}
+.phcolor{
+    font-size: 16px;
+    color: #7F7F7F;
+  }
+
+.personalInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+  justify-content:flex-start;
+}
+.separate-line {
+  width: 100%;
+  height: 20rpx;
+  background: white;
+  margin-left: 90rpx;
+}
+
+.white-line {
+  width: 100%;
+  height: 8rpx;
+  background: white;
+  margin-left: 90rpx;
+}
+
+.gray-line {
+  width: 100%;
+  height: 3rpx;
+  background: gray;
+  margin-left: 0rpx;
+}
+
+.gray-line2 {
+  width: 100%;
+  height: 20rpx;
+  background: gray;
+  margin-left: 0rpx;
+}

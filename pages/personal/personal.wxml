@@ -1,3 +1,63 @@
-<view class='container-owner'>
+<view class="container"> 
   <navigation class='container-navigate' selected="4"></navigation>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="http://pic.58pic.com/58pic/14/03/02/58V58PICTFk_1024.jpg" background-size="account-bg"></image>
+    <text class="userinfo-nickname">老王</text>
+  </view>
+
+  <view class="order" catchtap="toOrder">
+    <text class="myorder-text">我的订单</text>
+    <text class="myorder-text1">查看全部订单</text>
+    <icon class='iconfont icon-youjiantou personal-icon-style2'/>
+  </view>
+  
+  <view class="gray-line"></view>
+
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name">
+      <view class="nav-item" catchtap="toOrder" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <icon class="iconfont {{item.imageurl}} personal-icon-style1"></icon>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="gray-line2"></view>
+
+  <view class="person-list">
+    <view class="list-item">
+      <icon class="iconfont icon-jifen personal-icon-style"></icon>
+      <text class="item-text" catchtap="toPointmall">我的积分</text>
+      <icon class='iconfont icon-youjiantou personal-icon-style3'/>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item">
+       <icon class="iconfont icon-youhuiquan personal-icon-style"></icon>
+       <text class="item-text" catchtap="toCoupon">我的优惠券</text>
+       <icon class='iconfont icon-youjiantou personal-icon-style3'/>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item">
+      <icon class="iconfont icon-daohuoqingdan personal-icon-style"></icon>
+      <text class="item-text" catchtap="toCheaklist">我的清单</text>
+      <icon class='iconfont icon-youjiantou personal-icon-style3'/>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item">
+      <icon class="iconfont icon-wodeziliao personal-icon-style"></icon>
+      <text class="item-text" catchtap="toPersonalinfo">我的资料</text>
+      <icon class='iconfont icon-youjiantou personal-icon-style3'/>
+    </view>
+
+    <view class="person-line"></view>
+
+  </view>
+
+
 </view>

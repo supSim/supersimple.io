@@ -1,0 +1,41 @@
+<view class="container"> 
+
+  <view class="personalInfo">
+
+   <view class="items">
+      <text class='text-style' >姓名:</text>
+      <input class='phinput' placeholder='请输入您的真实姓名' placeholder-class="phcolor"></input>
+    </view>
+
+    <view class="gray-line"></view>
+
+    <view class="items">
+      <text class='text-style' >手机号:</text>
+      <input class='phinput' placeholder='请输入您的真实号码' placeholder-class="phcolor"></input>
+   </view>
+   
+   <view class="gray-line2"></view>
+
+    <view class="items">
+      <text class='text-style' >所在地区:</text>
+      <input class='phinput' placeholder='请输入所在地区' placeholder-class="phcolor"></input>
+   </view>
+
+  <view class="gray-line"></view>
+
+    <view class="items">
+      <text class='text-style' >详细地址:</text>
+      <input class='phinput' placeholder='请输入您的详细地址' placeholder-class="phcolor"></input>
+   </view>
+
+  <view class="gray-line"></view>
+
+    <view class="items">
+      <text class='text-style' >小区名称:</text>
+      <input class='phinput' placeholder='请输入您的小区名称' placeholder-class="phcolor"></input>
+   </view>
+
+   <view class="gray-line"></view>
+
+  </view>
+ </view>
