@@ -8,6 +8,7 @@
   width: 750rpx;
   height: 100rpx;
   background-color: white;
+  z-index: 999;
 }
 
 .detail-icon-home {
