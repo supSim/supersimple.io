@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/category/category",
     "pages/goodsDetail/goodsDetail",
     "pages/mainPage/main",
     "pages/index/index",
@@ -12,8 +13,7 @@
     "pages/orderDetail/orderDetail",
     "pages/order/order",
     "pages/coupon/coupon",
-    "pages/checkList/checkList",
-    "pages/category/category"
+    "pages/checkList/checkList"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,3 +1,37 @@
-<view class='container-owner'>
+<view class='container-owner background-color-grey'>
   <navigation selected="1" class="container-navigate"></navigation>
+  <view class='category-seek-bar background-color-white'>
+    <input value='{{searchKey}}' placeholder='搜索所有商品' class='background-color-grey category-search-bar font-size-middle' placeholder-class='category-place-holder'></input>
+    <icon class='iconfont icon-sousuo1 category-search-icon'></icon>
+  </view>
+  <view class='category-container background-color-white'>
+    <view class='categories'>
+      <text wx:for="{{goodsCategory}}" class="category-item font-size-middle {{selectCategory == item.id ? 'background-color-blue color-white': ''}}" bindtap='changeCategory' data-id="{{item.id}}">{{item.name}}</text>
+    </view>
+    <view class='scroll-container category-goods-area'>
+      <view wx:for="{{filterGoodsList}}" class='category-goods-container' bindtap='toGoodsDetail' data-goodsId='{{item.goodsId}}'>
+      <image src='{{item.goodsImage}}' class='category-goods-image'>
+        <text class='goods-focus-num background-color-green'>关注： 88</text>
+      </image>
+      <view class='category-goods-desc'>
+        <text class='category-goods-desc-first'>{{item.goodsDesc+item.goodsName+item.goodsWeight}}</text>
+        <view class='category-lable-list'>
+          <view wx:for="{{item.goodsLable}}" wx:for-item="lableName"    class='category-lable-item background-color-green'>
+          {{lableName}}</view>
+        </view>
+        <view class='goods-num-desc'>
+          <view>
+            <text class='category-goods-num focus-number'>￥{{item.goodsPrice}}</text>
+            <text class='category-goods-num'>已售<text class='focus-number'>{{item.goodsSaleNum}}</text>个/还剩<text class='focus-number'>{{item.goodsRecategory}}</text>个</text>
+            <text class='category-goods-presale font-size-smaller'>开始：{{item.preSaleStart}}</text>
+          </view>
+          <view class='goods-number-desc-right'>
+            <view class='flex-end'><view class='goods-add-shop-cart color-green'>加入购物车</view></view>
+            <view class='goods-pick-time'>结束：{{item.preSaleEnd}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
 </view>
