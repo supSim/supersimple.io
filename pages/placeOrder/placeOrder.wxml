@@ -1,0 +1,56 @@
+<view class='container-owner background-color-grey'>
+  <view class='scroll-container'>
+  <view class='place-order-goods-list background-color-white'>
+    <view wx:for='{{orderInfo.shopCartInfo}}' class='goods-info-item'>
+      <image src='{{item.goodsImage}}' class='place-order-good-image'></image>
+      <view class='goods-text-desc'>
+        <text class='font-size-middle'>{{item.goodsDesc + item.goodsName + '(' + item.goodsWeight + 'g)'}}</text>
+        <view class='place-order-goods-price'>
+          <text>
+          <text class='text-style font-size-large color-red'>￥{{item.goodsRealPrice}}</text>
+          <text class='text-style font-size-middle color-less-grey' style='text-decoration: LINE-THROUGH'>￥{{item.goodsOriginPrice}}</text>
+          </text>
+          <text class='text-style color-less-grey'>x{{item.shopCartNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='place-order-caculate-info font-size-small background-color-white color-less-grey'>
+    <text class='caculate-text-item'>
+      <text class='caculate-text-style'>商品总数</text>
+      <text class='caculate-text-style color-red'>x{{orderInfo.totalShopCartNum}}</text>
+    </text>
+    <text class='caculate-text-item border-top'>
+      <text class='caculate-text-style'>总价格</text>
+      <text class='caculate-text-style color-red font-size-large'>￥{{orderInfo.totalPrice}}</text>
+    </text>
+    <text class='caculate-text-item border-top'>
+      <text class='caculate-text-style'>实付金额</text>
+      <text class='caculate-text-style color-red'>￥{{orderInfo.realPayPrice}}</text>
+    </text>
+  </view>
+  <view class='palce-order-receiver-info background-color-white font-size-small'>
+    <view class='receiver-info-item border-color-dark-green'>
+      <view class='caculate-text-style receiver-head-style background-dark-green color-white height-60'>收件人：</view>
+      <text class='caculate-text-style margin-left-10 color-red height-60'>{{orderInfo.receiver.name}}</text>
+    </view>
+    <view class='receiver-info-item border-color-dark-green'>
+      <view class='caculate-text-style receiver-head-style background-dark-green color-white height-60'>电话：</view>
+      <text class='caculate-text-style margin-left-10 color-red height-60'>{{orderInfo.receiver.phone}}</text>
+    </view>
+    <view class='receiver-info-item border-color-dark-green'>
+      <view class='caculate-text-style receiver-head-style background-dark-green color-white height-60'>门牌号：</view>
+      <text class='caculate-text-style margin-left-10 color-red height-60'>{{orderInfo.receiver.houseNumber}}</text>
+    </view>
+
+    <view class='font-size-small foreman-info color-black'>团长姓名： {{orderInfo.foreman.name}}</view>
+    <view class='font-size-small foreman-info color-black'>团长电话： {{orderInfo.foreman.phone}}</view>
+    <view class='font-size-small foreman-info color-black'>自提点： {{orderInfo.foreman.pickProvince + '-' + orderInfo.foreman.pickCity + '-' + orderInfo.foreman.pickDistrict + ' ' + orderInfo.foreman.pickAddress}}</view>
+    <view class='font-size-small foreman-info color-black'>详细地址： {{orderInfo.foreman.detailAdress}}</view>
+
+    <textarea value='{{}}' placeholder='备注...' class='remark-textarea font-size-large border-color-blue color-black' placeholder-class='placeholder-class' bindinput='changeRemark' maxlength='200'></textarea>
+  </view>
+
+  <view class='confirm-btn background-color-blue color-white font-size-large' bindtap='submitOrder'>确认订单</view>
+</view>
+</view>

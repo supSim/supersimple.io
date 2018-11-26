@@ -34,6 +34,16 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    shopCartInfo: [
+      {goodsId: '123456',
+      goodsImage: 'http://www.17qq.com/img_qqtouxiang/76490995.jpeg',
+      shopCartNum: 1,
+      goodsDesc: '【人气商品】',
+      goodsName: '橘子糖',
+      goodsWeight: '500',
+      goodsRealPrice: '19.90',
+      goodsOriginPrice: '29.90'}
+    ]
   }
 })

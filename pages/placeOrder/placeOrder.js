@@ -4,14 +4,66 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    orderInfo: {
+      shopCartInfo: [],
+      totalShopCartNum: 0,
+      totalPrice: 0,
+      realPayPrice: 0,
+      receiver: {
+        name: '张三',
+        phone: '17626044268',
+        houseNumber: '307'
+      },
+      foreman: {
+        name: 'hugy',
+        phone: '17626044268',
+        pickProvince: '湖北省',
+        pickCity: '武汉市',
+        pickDistrict: '江夏区',
+        pickAddress: 'xx菜市场',
+        detailAdress: '超简单社区中心'
+      },
+      prePareData: {
+        goodsId: '123456',
+        goodsImage: 'http://www.17qq.com/img_qqtouxiang/76490995.jpeg',
+        shopCartNum: 1,
+        goodsDesc: '【人气商品】',
+        goodsName: '橘子糖',
+        goodsWeight: '500',
+        goodsRealPrice: '19.90',
+        goodsOriginPrice: '29.90'
+      },
+      remark: ''
+    },
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    let app = getApp();
+    if (options.type == 0) { // 单件购买
+      console.log(options.goodsId);
+      this.setData({
+        'orderInfo.shopCartInfo': this.data.prePareData
+      });
+    } else { // 点击去结算
+      this.setData({
+        'orderInfo.shopCartInfo': app.globalData.shopCartInfo
+      });
+    }
+    let totalNum = 0, totalPrice = 0, realPrice = 0;
+    this.data.orderInfo.shopCartInfo.forEach(item => {
+      totalNum += item.shopCartNum;
+      totalPrice += (item.shopCartNum * parseFloat(item.goodsRealPrice));
+      realPrice = totalPrice;
+    });
+    this.setData({
+      'orderInfo.totalShopCartNum': totalNum,
+      'orderInfo.totalPrice': totalPrice,
+      'orderInfo.realPayPrice': realPrice
+    });
+    console.log(this.data.orderInfo);
   },
 
   /**
@@ -61,5 +113,13 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  changeRemark: function (e) {
+    this.setData({
+      'orderInfo.remark': e.detail.value
+    })
+  },
+  submitOrder: function () {
+    console.log(this.data.orderInfo);
   }
 })

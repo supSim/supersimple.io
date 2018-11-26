@@ -13,3 +13,6 @@
 .font-size-smaller {
   font-size: 25rpx !important;
 }
+.font-size-smallest {
+  font-size: 25rpx !important;
+}

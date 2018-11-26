@@ -1,5 +1,7 @@
 /**app.wxss**/
 @import './asset/icon/stylesheet.wxss';
+@import './asset/color/fontSize.wxss';
+@import './asset/color/color.wxss';
 .container {
   height: 100%;
   display: flex;
@@ -25,7 +27,7 @@
 }
 
 .placeholder-class{
-  color: #f0f0f0;
+  color: #565656;
   font-size: 33rpx;
   justify-content: center;
 }
@@ -39,4 +41,8 @@
 .scroll-container::-webkit-scrollbar {
   width: 0rpx;
   background: white;
+}
+
+.margin-left-10 {
+  margin-left:  10rpx;
 }
