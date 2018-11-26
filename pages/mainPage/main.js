@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showLoading: false,
     swipeImageUrl: [   "http://pic.58pic.com/58pic/14/03/02/58V58PICTFk_1024.jpg",
       "http://tp.yiaedu.com/showimg.php?url=http://uploads.xuexila.com/allimg/1703/867-1F330164643.jpg",
       "http://www.17qq.com/img_qqtouxiang/76490995.jpeg"
@@ -51,7 +52,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
   },
 
   /**

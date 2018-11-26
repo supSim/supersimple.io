@@ -1,4 +1,5 @@
 <view class='container-owner background-color-grey'>
+  <RingLoading wx:if="{{showLoading}}"></RingLoading>
   <view class='scroll-container'>
   <navigation class='container-navigate' selected="0"></navigation>
   <swiper indicator-dots='true' indicator-color='#f0f0f0' indicator-active-color='#28ff28' autoplay='true' class='main-swiper'>

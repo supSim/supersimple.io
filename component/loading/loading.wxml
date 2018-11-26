@@ -1,0 +1,8 @@
+<view class='ring-loading'>
+  <view id='ring' class='ring'>
+    <view class="ring-area {{'icon-' + index}}" wx:for="{{9}}">
+      <view class="ring-icon {{'icon-color-' + index}}"></view>
+    </view>
+  </view>
+  <view class='loading-text font-size-middle'>加载中...</view>
+</view>

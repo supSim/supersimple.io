@@ -1,0 +1,128 @@
+
+.ring-loading {
+  height: 280rpx;
+  width: 250rpx;
+  background-color: black;
+  opacity: .6;
+  position: absolute;
+  top: 350rpx;
+  left: 250rpx;
+  z-index: 999;
+  border-radius: 10rpx;
+}
+
+.ring-area {
+  height: 120rpx;
+  width: 120rpx;
+  position: absolute;
+  margin-left: 65rpx;
+  background-color: transparent;
+}
+
+.ring-icon {
+  height: 14rpx;
+  width: 14rpx;
+  border-radius: 7rpx;
+  position: absolute;
+  left: 60rpx;
+  background-color: white;
+}
+
+.icon-0 {
+}
+
+.icon-1 {
+  transform: rotate(40deg);
+}
+
+.icon-2 {
+  transform: rotate(80deg);
+}
+
+.icon-3 {
+  transform: rotate(120deg);
+}
+
+.icon-4 {
+  transform: rotate(160deg);
+}
+
+.icon-5 {
+  transform: rotate(200deg);
+}
+
+.icon-6 {
+  transform: rotate(240deg);
+}
+
+.icon-7 {
+  transform: rotate(280deg);
+}
+
+.icon-8 {
+  transform: rotate(320deg);
+}
+
+.icon-color-0 {
+  background-color: #FFF;
+}
+
+.icon-color-1 {
+  background-color: #EEE;
+}
+
+.icon-color-2 {
+  background-color: #DDD;
+}
+
+.icon-color-3 {
+  background-color: #CCC;
+}
+
+.icon-color-4 {
+  background-color: #BBB;
+}
+
+.icon-color-5 {
+  background-color: #AAA;
+}
+
+.icon-color-6 {
+  background-color: #999;
+}
+
+.icon-color-7 {
+  background-color: #888;
+}
+
+.icon-color-8 {
+  background-color: #777;
+}
+
+.ring {
+  margin-top: 40rpx;
+  animation: rotateAnim 1.5s infinite;
+  animation-timing-function:linear;
+}
+
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 50% 60rpx;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: 50% 60rpx;
+  }
+}
+
+.loading-text {
+  display: block;
+  height: 40rpx;
+  width: 100%;
+  line-height: 40rpx;
+  text-align: center;
+  color: white;
+  margin-top: 210rpx;
+  font-size: 32rpx;
+}

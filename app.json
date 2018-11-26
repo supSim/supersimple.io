@@ -1,10 +1,10 @@
 {
   "pages":[
+    "pages/mainPage/main",
     "pages/pointMall/pointMall",
     "pages/placeOrder/placeOrder",
     "pages/category/category",
     "pages/goodsDetail/goodsDetail",
-    "pages/mainPage/main",
     "pages/index/index",
     "pages/logs/logs",
     "pages/shoppingCart/shoppingCart",
@@ -20,5 +20,8 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "RingLoading": "./component/loading/loading" 
   }
 }
