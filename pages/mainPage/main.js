@@ -65,6 +65,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.freshShopCartNum();
     this.setData({
       'showLoading': true
     });
@@ -91,7 +92,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
@@ -143,7 +144,7 @@ Page({
   },
 
   freshShopCartNum () {
-    let shopCartNum = app.computeShopCartNum(this.setShopCartNum);
+    let shopCartNum = app.computeShopCartNum('', this.setShopCartNum);
     
   },
 

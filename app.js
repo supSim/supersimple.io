@@ -106,7 +106,7 @@ App({
     });
   },
 
-  computeShopCartNum (successCallback) {
+  computeShopCartNum (goodsId, successCallback) {
     console.log(successCallback);
     let shopCartNum = 0;
     wx.getStorage({
@@ -114,7 +114,9 @@ App({
       success: (res) => {
         let shopCartInfo = res.data;
         shopCartInfo.forEach((item) => {
-          shopCartNum += item.shopCartNum;
+          if((goodsId != '' && item.goodsId == goodsId) || goodsId == '') {
+            shopCartNum += item.shopCartNum;
+          }
         });
         successCallback(shopCartNum);
       }

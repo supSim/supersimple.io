@@ -68,7 +68,7 @@
       </view>
       <view wx:if="{{currentPage == 1}}">
         <view class='buy-record-num background-color-blue color-white font-size-middle'>
-          共有{{goods.buyGoodsPeople}}人购买,累计销售{{goods.goodsSaleNum}}份
+          共有{{goods.buyGoodsPeople}}人购买,累计销售{{goods.totalAmount - goods.remainAmount}}份
         </view>
         <view wx:for="{{goods.buyPeoples}}" wx:for-item="people" class='record-buy-people background-color-white'>
           <view style='display: flex;'>

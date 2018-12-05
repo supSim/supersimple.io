@@ -64,9 +64,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.setData({
-      'shopCartNum': app.computeShopCartNum()
-    });
+    app.computeShopCartNum(this.data.goods.goodsId, (num) => {
+      this.setData({
+        'shopCartNum': num
+      });
+    })
   },
 
   /**
@@ -118,6 +120,25 @@ Page({
       'currentPage': whichPage
     });
     console.log(typeof this.data.currentPage);
+    if (this.data.currentPage == '1') {
+      this.showLoading(true);
+      http.api({
+        url: `http://localhost:8082/goods/buyer-record/${this.data.goods.goodsId}`,
+        success: (res) => {
+          console.log(res);
+          this.setData({
+            'goods.buyPeoples': res.data.result.buyer,
+            'goods.buyGoodsPeople': res.data.result.buyNum
+          });
+        },
+        fail: () => {
+
+        },
+        complete: () => {
+          this.showLoading(false);
+        }
+      })
+    }
   },
 
   buyGoods () {
@@ -132,5 +153,11 @@ Page({
     this.setData({
       'shopCartNum': app.computeShopCartNum()
     });
+  },
+
+  showLoading (show) {
+    this.setData({
+      'showLoading': show
+    })
   }
 })
