@@ -1,7 +1,7 @@
 <view class='container-owner background-color-grey'>
   <RingLoading wx:if="{{showLoading}}"></RingLoading>
   <view class='scroll-container'>
-  <navigation class='container-navigate' selected="0"></navigation>
+  <navigation class='container-navigate' selected="0" shopCartNum="{{shopCartNum}}"></navigation>
   <swiper indicator-dots='true' indicator-color='#f0f0f0' indicator-active-color='#28ff28' autoplay='true' class='main-swiper'>
     <block wx:for="{{swipeImageUrl}}">
       <swiper-item>
@@ -10,7 +10,7 @@
     </block>
   </swiper>
   <view class='main-search-bar background-color-white'>
-    <input placeholder='请输入搜索关键词' value='{{searchKey}}' class='main-input' placeholder-class='placeholder-class'/>
+    <input placeholder='搜索所有商品' value='{{searchKey}}' class='main-input font-size-small' placeholder-class='placeholder-class font-size-small'/>
     <icon class='iconfont icon-sousuo1 search-icon'/>
   </view>
   <view class='main-shop-desc background-color-white'>
@@ -18,42 +18,47 @@
       <image class='shop-image'>
       </image>
       <view class='shop-text-desc'>
-        <view class='text-desc-style'>{{shopDesc.shopLoc}}</view>
-        <view class='text-desc-style'>{{shopDesc.shopName}}</view>
-        <view class='text-desc-style'>{{shopDesc.shopDesc}}</view>
+        <view class='text-desc-style font-size-middle'>{{shopDesc.shopLoc}}</view>
+        <view class='text-desc-style font-size-middle'>{{shopDesc.shopName}}</view>
+        <view class='text-desc-style font-size-small'>{{shopDesc.shopDesc}}</view>
       </view>
     </view>
     <view class='main-shop-desc-right'>
-      <view class='desc-right-style-1'>粉丝数</view>
-      <view class='desc-right-style-2'>{{shopDesc.fans}}</view>
-      <view class='desc-right-style-1'>购买指数</view>
-      <view class='desc-right-style-2'>{{shopDesc.buyPoint}}</view>
+      <view class='desc-right-style-1 font-size-smaller'>粉丝数</view>
+      <view class='desc-right-style-2 font-size-middle color-red'>{{shopDesc.fans}}</view>
+      <view class='desc-right-style-1 font-size-smaller'>购买指数</view>
+      <view class='desc-right-style-2 font-size-middle color-red'>{{shopDesc.buyPoint}}</view>
     </view>
   </view>
   <view class='main-goods-list background-color-white'>
     <view wx:for="{{goodsList}}" class='main-goods-container' bindtap='toGoodsDetail' data-goodsId='{{item.goodsId}}'>
       <image src='{{item.goodsImage}}' class='main-goods-image'>
-        <text class='goods-focus-num background-color-green'>关注： 88</text>
+        <text class='goods-focus-num background-color-blue'>关注： {{item.focusNum}}</text>
       </image>
       <view class='main-goods-desc'>
-        <text class='main-goods-desc-first'>{{item.goodsDesc+item.goodsName+item.goodsWeight}}</text>
+        <text class='main-goods-desc-first font-size-middle'>{{'【' + item.goodsDesc + '】' + item.goodsName+item.goodsWeight}}</text>
         <view class='main-lable-list'>
-          <view wx:for="{{item.goodsLable}}" wx:for-item="lableName"    class='main-lable-item background-color-green'>
-          {{lableName}}</view>
+          <view wx:for="{{item.goodsLabel}}" wx:for-item="labelName"    class='main-lable-item background-color-blue'>
+          {{labelName}}</view>
         </view>
         <view class='goods-num-desc'>
           <view>
-            <text class='main-goods-num focus-number'>￥{{item.goodsPrice}}</text>
-            <text class='main-goods-num'>已售<text class='focus-number'>{{item.goodsSaleNum}}</text>个/还剩<text class='focus-number'>{{item.goodsRemain}}</text>个</text>
-            <text class='main-goods-presale'>预售：{{item.preSaleTime}}</text>
+            <text class='main-goods-num focus-number'>
+              <text>￥{{item.goodsRealPrice/1000}}</text>
+              <text class='main-goods-num-2 color-less-grey'>￥{{item.goodsOriginPrice/1000}}</text>
+            </text>
+            <text class='main-goods-num'>已售<text class='focus-number'>{{item.totalAmount - item.remainAmount}}</text>个/还剩<text class='focus-number'>{{item.remainAmount}}</text>个</text>
+            <text class='main-goods-presale'>预售：{{item.preSaleTimeStart + '-' + item.preSaleTimeEnd}}</text>
           </view>
           <view class='goods-number-desc-right'>
-            <view class='flex-end'><view class='goods-add-shop-cart color-green'>加入购物车</view></view>
-            <view class='goods-pick-time'>提货：{{item.goodsPickTime}}</view>
+            <view class='flex-end'><view class='goods-add-shop-cart color-green' catchtap='addShopCart' data-goods='{{item}}'>加入购物车</view>
+            </view>
+            <view class='goods-pick-time'>提货：{{item.pickTime}}</view>
           </view>
         </view>
       </view>
     </view>
+    <text wx:if="{{goodsList.length === 0}}" class='no-goods-tip'>暂时没有正在售卖的商品哦~~~</text>
   </view>
   <image class='join-us-image'></image>
   </view>

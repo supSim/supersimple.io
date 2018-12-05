@@ -1,9 +1,12 @@
+var app = getApp();
+import http from '../../component/http/http.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    showLoading: false,
     orderInfo: {
       shopCartInfo: [],
       totalShopCartNum: 0,
@@ -41,13 +44,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let app = getApp();
+    this.operateLoading(true);
     if (options.type == 0) { // 单件购买
+      // 发送请求去拉取数据
       console.log(options.goodsId);
-      this.setData({
-        'orderInfo.shopCartInfo': this.data.prePareData
+      http.api({
+        url: 'http://localhost:8082/order/getPreInfo',
+        method: 'POST',
+        data: {
+          goodsId: options.goodsId,
+          userId: app.globalData.userId
+        },
+        success: (res) => {
+          console.log(res.data.result);
+          this.setData({
+            'orderInfo.prepareData': res.data.result.goods,
+            'orderInfo.receiver': res.data.result.buyer
+          });
+          
+        },
+        complete: (res) => {
+          this.operateLoading(false);
+        }
       });
-    } else { // 点击去结算
+    } else { // 点击去结算 结算购物车
       this.setData({
         'orderInfo.shopCartInfo': app.globalData.shopCartInfo
       });
@@ -121,5 +141,11 @@ Page({
   },
   submitOrder: function () {
     console.log(this.data.orderInfo);
+  },
+
+  operateLoading (show) {
+    this.setData({
+      'showLoading': show
+    });
   }
 })

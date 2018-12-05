@@ -9,7 +9,7 @@
   </view>
   <view class='navigate-shopping-cart' catchtap='switchPage' data-witch="2">
     <icon class="iconfont icon-gouwuche navigate-icon-style-2" ></icon>
-    <text class='navigate-shopping-cart-num'>{{shoppingCartNum}}</text>
+    <text class='navigate-shopping-cart-num'>{{shopCartNum}}</text>
   </view>
   <view class="navigate-item {{selected == 3 ? 'color-red': ''}} margin-left-150" catchtap='switchPage' data-witch="3">
     <icon class="iconfont icon-danju navigate-icon-style-1"></icon>

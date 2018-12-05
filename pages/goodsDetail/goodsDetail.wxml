@@ -1,32 +1,33 @@
 <view class='container-owner background-color-grey'>
    <TabBar selected="{{currentPage}}" bind:changeTab="changeTab"></TabBar>
+   <RingLoading wx:if="{{showLoading}}"></RingLoading>
    <view class='scroll-container'>
   <view wx:if ="{{currentPage == 0}}">
     <image src='{{goods.goodsImage}}' class='detail-goods-image'></image>
     <view class='detail-price-info'>
       <view class='price-info-left'>
-        <text class='detail-price-common-style'>￥{{goods.goodsRealPrice}}</text>
-        <text class='detail-price-common-style' style="TEXT-DECORATION: line-through">￥{{goods.goodsOriginPrice}}</text>
+        <text class='detail-price-common-style'>￥{{goods.goodsRealPrice/1000}}</text>
+        <text class='detail-price-common-style' style="TEXT-DECORATION: line-through">￥{{goods.goodsOriginPrice/1000}}</text>
       </view>
       <view class='border-block'></view>
       <view class='price-info-right background-color-yellow font-size-small'>
         <text class='price-right-style'>即将结束</text>  
-        <text class='price-right-style'>11-22 19:00</text>  
+        <text class='price-right-style'>{{goods.preSaleTimeEnd}}</text>  
       </view>
     </view>
     <view class='detail-goods-desc border-bottom-color-grey border-bottom background-color-white'>
-      <view class='detail-goods-name font-size-large'>{{goods.goodsDesc + goods.goodsName}}</view>
+      <view class='detail-goods-name font-size-large'>{{'【' + goods.goodsDesc + '】' + goods.goodsName}}</view>
       <view style='width: 100%'>
-        <view class='detail-focus-num font-size-small background-color-yellow'>关注人数： {{goods.focusNum}}</view>
+        <view class='detail-focus-num font-size-small background-color-yellow'>关注人数： {{goods.focusNum||203}}</view>
       </view>
     </view>
     <view class='detail-sale-info background-color-white font-size-smaller'>
       <view class='sale-time-info color-red'>
-        <view class='sale-time-style'>预售时间：{{goods.preSaleTime}}</view>
-        <view class='sale-time-style'>提货时间：{{goods.goodsPickTime}}</view>
+        <view class='sale-time-style'>预售时间：{{goods.preSaleTimeStart + '-' + goods.preSaleTimeEnd}}</view>
+        <view class='sale-time-style'>提货时间：{{goods.pickTime}}</view>
       </view>
       <view class='detail-sale-num'>
-         已售<view class='detail-text color-red'>{{goods.goodsSaleNum}}</view>份/还剩<view class='detail-text color-red'>{{goods.goodsRemain}}</view>份
+         已售<view class='detail-text color-red'>{{goods.totalAmount - goods.remainAmount}}</view>份/还剩<view class='detail-text color-red'>{{goods.remainAmount}}</view>份
       </view>
     </view>
     <view class='detail-share-info background-color-white'>
@@ -42,10 +43,10 @@
     </view>
     <view class='goods-detail-bottom'>
       <text class='iconfont icon-gouwuche detail-bottom-style width-150 background-color-white font-size-super'>
-        <text class='detail-gouwuche-num font-size-small'>0</text>
+        <text class='detail-gouwuche-num font-size-small'>{{shopCartNum}}</text>
       </text>
-      <text class='detail-bottom-style width-300 background-color-yellow color-white font-size-large'>加入购物车</text>
-      <text class='detail-bottom-style width-300 background-color-red color-white font-size-large'>单件购买</text>
+      <text class='detail-bottom-style width-300 background-color-yellow color-white font-size-large' bindtap='addToShopCart'>加入购物车</text>
+      <text class='detail-bottom-style width-300 background-color-red color-white font-size-large' bindtap='buyGoods'>单件购买</text>
   </view>
     <view wx:if="{{currentPage == 2 || currentPage == 1}}" style='margin-bottom: 120rpx;'>
       <view class='buy-record-container background-color-white'>
@@ -56,13 +57,13 @@
           <view class='buy-record-text-desc font-size-small'>
             <text class='record-text-style'>{{goods.goodsDesc + goods.goodsName + (goods.goodsWeight)}}</text>
             <text class='record-text-style2 background-color-blue color-white'>关注：{{goods.focusNum}}</text>
-            <text class='record-text-style color-red'>￥{{goods.goodsRealPrice}}  <text class='color-black font-size-smaller' style="TEXT-DECORATION: line-through">￥{{goods.goodsOriginPrice}}</text></text>
-            <text class='record-text-style'>还剩<text class='color-red'>{{goods.goodsRemain}}</text>份</text>
+            <text class='record-text-style color-red'>￥{{goods.goodsRealPrice/1000}}  <text class='color-black font-size-smaller' style="TEXT-DECORATION: line-through">￥{{goods.goodsOriginPrice/1000}}</text></text>
+            <text class='record-text-style'>还剩<text class='color-red'>{{goods.remainAmount}}</text>份</text>
           </view>
         </view>
         <view class='buy-record-time font-size-smaller'>
-          <text class='record-time-style'>销售：{{goods.preSaleTime}}</text>
-          <text class='record-time-style'>提货：{{goods.goodsPickTime}}</text>
+          <text class='record-time-style'>销售：{{goods.preSaleTimeStart}}</text>
+          <text class='record-time-style'>提货：{{goods.pickTime}}</text>
         </view>
       </view>
       <view wx:if="{{currentPage == 1}}">

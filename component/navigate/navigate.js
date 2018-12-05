@@ -4,7 +4,7 @@ Component({
       type: Number,
       default: 0
     },
-    shoppingCartNum: {
+    shopCartNum: {
       type: Number,
       default: 0
     }

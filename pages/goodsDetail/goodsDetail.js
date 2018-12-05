@@ -1,10 +1,14 @@
+import http from '../../component/http/http.js';
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    showLoading: false,
     currentPage: 1,
+    ShopCartNum: 0,
     goods: {
       goodsId: '123456',
       goodsName: '哈密瓜',
@@ -22,9 +26,9 @@ Page({
       buyPeoples: [
         {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1},
         {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1},
-        { openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 },
-        { openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 },
-        { openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 }
+        {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 },
+        {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 },
+        {openId: '', customerName: '张三', buyTime: '11-24:22', buyNum: 1 }
       ]
     }
   },
@@ -33,14 +37,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(options);
+    this.setData({
+      'currentPage': 0,
+      'goods.goodsId': options.goodsId,
+      'showLoading': true
+    });
+    http.api({
+      url: "http://localhost:8082/goods/detail/" + this.data.goods.goodsId,
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          'goods': res.data.result.goods,
+          'showLoading': false
+        })
+      },
+      fail: (res) => {
+        this.setData({
+          'showLoading': false
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    this.setData({
+      'shopCartNum': app.computeShopCartNum()
+    });
   },
 
   /**
@@ -92,5 +118,19 @@ Page({
       'currentPage': whichPage
     });
     console.log(typeof this.data.currentPage);
+  },
+
+  buyGoods () {
+    wx.redirectTo({
+      url: '/pages/placeOrder/placeOrder?type=0&goodsId=' + this.data.goods.goodsId,
+    });
+  },
+
+  addToShopCart () {
+    app.addToShopCart(this.data.goods, 1);
+    console.log(app.computeShopCartNum());
+    this.setData({
+      'shopCartNum': app.computeShopCartNum()
+    });
   }
 })

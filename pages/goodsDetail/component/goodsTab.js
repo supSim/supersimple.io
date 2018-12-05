@@ -16,6 +16,11 @@ Component({
     changeTab: function( event ) {
       console.log(event.currentTarget.dataset.id);
       this.triggerEvent('changeTab', event.currentTarget.dataset.id);
+    },
+    goToMainPage: function () {
+      wx.redirectTo({
+        url: '/pages/mainPage/main'
+      });
     }
   }
 });

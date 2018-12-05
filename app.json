@@ -1,11 +1,11 @@
 {
   "pages":[
     "pages/mainPage/main",
+    "pages/index/index",
     "pages/pointMall/pointMall",
     "pages/placeOrder/placeOrder",
     "pages/category/category",
     "pages/goodsDetail/goodsDetail",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/shoppingCart/shoppingCart",
     "pages/personalInfo/personalInfo",

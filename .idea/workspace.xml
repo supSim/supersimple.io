@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb3f9ddf-4506-4147-88cd-0a63684bd392" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.wxss" afterPath="$PROJECT_DIR$/app.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/color/color.less" afterPath="$PROJECT_DIR$/asset/color/color.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/color/color.wxss" afterPath="$PROJECT_DIR$/asset/color/color.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/color/fontSize.less" afterPath="$PROJECT_DIR$/asset/color/fontSize.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/color/fontSize.wxss" afterPath="$PROJECT_DIR$/asset/color/fontSize.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/placeOrder/placeOrder.js" afterPath="$PROJECT_DIR$/pages/placeOrder/placeOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/placeOrder/placeOrder.wxml" afterPath="$PROJECT_DIR$/pages/placeOrder/placeOrder.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/placeOrder/placeOrder.wxss" afterPath="$PROJECT_DIR$/pages/placeOrder/placeOrder.wxss" />
-    </list>
+    <list default="true" id="bb3f9ddf-4506-4147-88cd-0a63684bd392" name="Default" comment="" />
     <ignored path="superSimple.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -59,9 +47,9 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1543213738175" expanded="true" signature="47400:47442" ph="..." />
-                <marker date="1543213738175" expanded="true" signature="47400:47460" ph="..." />
-                <marker date="1543213738175" expanded="true" signature="47400:47473" ph="..." />
+                <marker date="1543225772975" expanded="true" signature="45920:45962" ph="..." />
+                <marker date="1543225772975" expanded="true" signature="45920:45980" ph="..." />
+                <marker date="1543225772975" expanded="true" signature="45920:45993" ph="..." />
               </folding>
             </state>
           </provider>
@@ -399,15 +387,15 @@
       <workItem from="1542959681045" duration="2327000" />
       <workItem from="1542973657897" duration="5266000" />
       <workItem from="1543039833278" duration="1860000" />
-      <workItem from="1543195593345" duration="4498000" />
+      <workItem from="1543195593345" duration="5096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27567000" />
+    <option name="totallyTimeSpent" value="28165000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1379" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="1379" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24906786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -503,9 +491,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1543213738175" expanded="true" signature="47400:47442" ph="..." />
-            <marker date="1543213738175" expanded="true" signature="47400:47460" ph="..." />
-            <marker date="1543213738175" expanded="true" signature="47400:47473" ph="..." />
+            <marker date="1543225772975" expanded="true" signature="45920:45962" ph="..." />
+            <marker date="1543225772975" expanded="true" signature="45920:45980" ph="..." />
+            <marker date="1543225772975" expanded="true" signature="45920:45993" ph="..." />
           </folding>
         </state>
       </provider>
@@ -831,9 +819,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1543213738175" expanded="true" signature="47400:47442" ph="..." />
-            <marker date="1543213738175" expanded="true" signature="47400:47460" ph="..." />
-            <marker date="1543213738175" expanded="true" signature="47400:47473" ph="..." />
+            <marker date="1543225772975" expanded="true" signature="45920:45962" ph="..." />
+            <marker date="1543225772975" expanded="true" signature="45920:45980" ph="..." />
+            <marker date="1543225772975" expanded="true" signature="45920:45993" ph="..." />
           </folding>
         </state>
       </provider>

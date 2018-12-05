@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "TabBar": "./component/goodsTab"
+    "TabBar": "./component/goodsTab",
+    "RingLoading": "../../component/loading/loading"
   }
 }
